@@ -8,7 +8,7 @@ app.use(express.static('public'));
 // Set the view engine to ejs
 app.set('view engine', 'ejs');
 // Port website will run on
-app.listen(3000);
+app.listen(80);
 
 app.use(express.json());       
 app.use(express.urlencoded({extended: true})); 
