@@ -8,7 +8,6 @@ app.use(express.static('public'));
 // Set the view engine to ejs
 app.set('view engine', 'ejs');
 // Port website will run on
-app.listen(80);
 
 app.use(express.json());       
 app.use(express.urlencoded({extended: true})); 
@@ -27,4 +26,9 @@ app.post("/", (req, res) => {
   console.log("Password: " + password);
   res.send("Data received");
 });
- 
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
